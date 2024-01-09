@@ -8,7 +8,7 @@ import RedMi_Note from "../Images/RedMi_Note.png";
 import ProductItems from "./ProductItems";
 import Cart from "./NavBar/Cart";
 
-const products = [
+export const products = [
   {
     id: 1,
     Image: Google_Pixel,
@@ -51,7 +51,7 @@ const Home = () => {
 console.log("home")
   return (
     <>
-        <div><Cart /></div>
+      <div><Cart /></div>
    
       <div className="flex flex-wrap max-w-600">
         {products.map((item) => (

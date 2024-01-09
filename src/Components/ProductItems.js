@@ -5,13 +5,13 @@ import CartContext from '../store/cart-context';
 const ProductItems=({id, Image, Title, amount})=>{
    const context =useContext(CartContext)
   
-    const addToCart =(amount)=>{
+    const addToCart =(id)=>{
         context.addItem({
             id:id,
             Title: Title,
             amount: amount,
         })
-        
+        console.log("context", context)
     }
     return (
       <>
@@ -28,7 +28,7 @@ const ProductItems=({id, Image, Title, amount})=>{
           />
           <div className="text-center no-underline">{Title}</div>
           <div className="text-center no-underline">{amount}</div>
-          <button className="bg-blue-300 text-white px-2 py-1 rounded-full  focus:outline-none" onClick={()=>addToCart(amount)}>
+          <button className="bg-blue-300 text-white px-2 py-1 rounded-full  focus:outline-none" onClick={()=>addToCart( id)}>
             <span className="no-underline text-md size-2">+Add</span>
           </button>
         </div>
