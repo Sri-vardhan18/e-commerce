@@ -31,18 +31,16 @@ const CartProvider =(props)=>{
         initalState
       ); 
 
-    const getTotalItems=()=>{
-      const cart={}
-      for(let i=1; i<products.length+1; i++){
-        cart[i]=0
-      }
-      console.log(cart)
-      }
       
 
       const getTotalPrice = (items) => {
         return items.reduce((total, item) => total + parseFloat(item.amount), 0);
       };
+
+      
+
+       
+
       
 
       const addItemToCartHandler =(item)=>{
@@ -52,9 +50,9 @@ const CartProvider =(props)=>{
 
       const cartContext = {
         addItems: state.addItems,
-        count: state.count,
         addItem: addItemToCartHandler,
-        totalamount:getTotalPrice(state.addItems)
+        totalamount:getTotalPrice(state.addItems),
+        
       };
       
       return (

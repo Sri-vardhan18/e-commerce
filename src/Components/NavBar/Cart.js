@@ -5,7 +5,9 @@ import CartContext  from "../../store/cart-context";
 
 const Cart = () => {
   const [isModel, setIsModel]= useState(false)
-  const {count} = useContext(CartContext)
+  const { addItems} = useContext(CartContext)
+  const count =addItems.length 
+  console.log(count)
   const closeModel =()=>{
     setIsModel(false)
   }
