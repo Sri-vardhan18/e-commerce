@@ -1,5 +1,6 @@
 import React, { useReducer, } from "react";
 import CartContext from "./cart-context"; 
+import { products } from "../Components/Home";
 
 
 // const CartContext = React.createContext("")
@@ -29,6 +30,15 @@ const CartProvider =(props)=>{
         cartReducer,
         initalState
       ); 
+
+    const getTotalItems=()=>{
+      const cart={}
+      for(let i=1; i<products.length+1; i++){
+        cart[i]=0
+      }
+      console.log(cart)
+      }
+      
 
       const getTotalPrice = (items) => {
         return items.reduce((total, item) => total + parseFloat(item.amount), 0);
