@@ -8,7 +8,6 @@ const Model=({isClose})=>{
 
     const closeModal=()=>{
         isClose(false)
-
     }
     return(
         <div className="fixed inset-0 overflow-y-auto z-50">
