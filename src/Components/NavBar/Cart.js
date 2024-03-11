@@ -8,7 +8,8 @@ const Cart = () => {
   const { addItems} = useContext(CartContext)
   const count =addItems.length 
   console.log(count)
-  const closeModel =()=>{
+  const closeModel =()=>{ 
+    
     setIsModel(false)
   }
 
